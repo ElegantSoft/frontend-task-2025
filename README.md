@@ -38,37 +38,7 @@ Create a modular component structure:
 
 ### 2. State Management with Zustand + Immer
 
-#### Cart Store Requirements
-
-#### Product Store Requirements
-
-```typescript
-interface ProductStore {
-  product: Product | null;
-  loading: boolean;
-  error: string | null;
-  selectedVariations: Record<string, string>;
-  selectedVariant: ProductVariant | null;
-
-  // Actions
-  fetchProduct: (slug: string) => Promise<void>;
-  setSelectedVariation: (variationType: string, value: string) => void;
-  clearSelectedVariations: () => void;
-
-  // Computed
-  getCurrentPrice: () => number;
-  getCurrentSalePrice: () => number;
-  isVariantAvailable: () => boolean;
-}
-```
-
-### 3. Persistence Requirements
-
-- Use Zustand's `persist` middleware for cart state
-- Implement proper serialization/deserialization
-- Handle cart state hydration on app initialization
-- Ensure cart persists across browser sessions
-
+#### Cart Store 
 ### 4. UI/UX Requirements
 
 #### Product Images
